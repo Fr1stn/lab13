@@ -1,20 +1,31 @@
-﻿Console.WriteLine("Введите первое число:");
-double a = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите второе число:");
-double b = Convert.ToDouble(Console.ReadLine());
-try
+class Program
 {
-    double s = a / b;
-    Console.WriteLine(s);
-}
-catch(DivideByZeroException)
-{
-    if (b == 0)
+    static int EXC(int a, int b)
     {
-        Console.WriteLine("Ошибка при делении на 0.");
+        if (a == 0 && b == 0)
+        {
+            throw new Exception("Выражение не имеет смысла!");
+        }
+        if (b == 0)
+        {
+            throw new Exception("На 0 делить нельзя!");
+        }
+        return a / b;
     }
-    else if (a == 0 && b == 0)
+    static void Main()
     {
-        Console.WriteLine("Ошибка!");
+        try
+        {
+            Console.WriteLine("Введите делимое:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите частное");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int s = EXC(a, b);
+            Console.WriteLine(s);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 }
