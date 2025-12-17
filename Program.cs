@@ -12,7 +12,7 @@ class Program
         }
         return a / b;
     }
-    static void Main()
+    static void Main(string[] args)
     {
         try
         {
@@ -29,3 +29,4 @@ class Program
         }
     }
 }
+
