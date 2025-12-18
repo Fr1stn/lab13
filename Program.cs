@@ -18,7 +18,7 @@ class Program
         {
             Console.WriteLine("Введите делимое:");
             int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("введите частное");
+            Console.WriteLine("Введите делитель");
             int b = Convert.ToInt32(Console.ReadLine());
             int s = EXC(a, b);
             Console.WriteLine(s);
@@ -29,4 +29,5 @@ class Program
         }
     }
 }
+
 
